@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css" 
+    integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" 
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/48c5daf7a7.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+    
+    
+    <title>SneakMax</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-left">
+                <a class="logo" href="#">SneakMax</a>
+            </div>
+            <div class="header-right">
+                <nav class="nav header-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Подбор товара</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Наша команда</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Доставка и оплата</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="cart header-cart">
+                    <button class="btn-cart">
+                        <img class="btn-cart-img" src="./images/cart.svg" alt="Корзина">
+                        <div class="cart-count">1</div>
+                    </button>
+                </div>
+                <button class="burger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div> 
+        </div>
+    </header>
+    <main>
+        <!-- hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-container">
+                    <span class="hero-bg-text">SneakMax</span>
+                    <h1 class="hero-title">Кроссовки известных брендов с&nbsp;доставкой по Украине</h1>
+                    <p class="hero-desc">Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многие другие по низким ценам</p>
+                    <button class="btn btn-hero">Перейти к покупкам</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- catalog -->
+
+        <section class="catalog">
+            <div class="container catalog-container">
+                <h2 class="title">Каталог</h2>
+                <div class="catalog-content">
+                    <div class="catalog-left">
+                        <div class="catalog-filters">
+                            <h3 class="catalog-subtitle">Подбор
+                                по&nbsp;параметрам</h3>
+                            <div class="catalog-prop">
+                                <div class="catalog-caption">Цена, грн</div>
+                                <div class="catalog-price catalog-prop-inner">
+                                    <div class="catalog-price-wrapper">
+                                        <input class="catalog-price-input input-0" id="input-0">
+                                        <input class="catalog-price-input input-1" id="input-1"> 
+                                    </div>
+                                    <div class="catalog-price-element" id="range-slider"></div>
+                                </div>
+                            </div>
+    
+                            <div class="catalog-prop">
+                                <div class="catalog-caption">Пол</div>
+                                <div class="catalog-prop-inner catalog-prop-inner-checkbox">
+                                    <label class="custom-checkbox">
+                                        <input class="custom-checkbox-field" type="checkbox" name="name" checked>
+                                        <span class="custom-checkbox-content">Мужской</span>
+                                    </label>
+                                    <label class="custom-checkbox">
+                                        <input class="custom-checkbox-field" type="checkbox" name="name" checked>
+                                        <span class="custom-checkbox-content">Женский</span>
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div class="catalog-prop">
+                                <div class="catalog-caption">Размер</div>
+                                <div class="catalog-prop-inner">
+                                    <table class="sizes-table">
+                                        <caption>Таблица размеров</caption>
+                                        <tbody>
+                                            <tr>
+                                                <td>35</td>
+                                                <td>36</td>
+                                                <td>37</td>
+                                            </tr>
+                                            <tr>
+                                                <td>38</td>
+                                                <td>39</td>
+                                                <td>40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>41</td>
+                                                <td>42</td>
+                                                <td>43</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="catalog-left-btns">
+                                <button class="btn btn-catalog">Применить</button>
+                                <button class="catalog-reset">сбросить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-right">
+                        <ul class="catalog-list">
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image.png" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Nike Air Force 1 '07 QS</h3>
+                                    <div class="product-price">6 100 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image1.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки New Balance ML574RP2</h3>
+                                    <div class="product-price">3 100 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image2.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки для бега Kalenji</h3>
+                                    <div class="product-price">4 000 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image3.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Mango</h3>
+                                    <div class="product-price">1 099 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image4.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Michael Kors Nick</h3>
+                                    <div class="product-price">4 900 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image5.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Puma Electron E Pro</h3>
+                                    <div class="product-price">2 599 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image6.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Puma Retaliate Tongue</h3>
+                                    <div class="product-price">2 350 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image7.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Lacoste Graduate 0721 1 Sma</h3>
+                                    <div class="product-price">3 020 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image8.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки EA7 Emporio Armani</h3>
+                                    <div class="product-price">4 599 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image.png" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Nike Air Force 1 '07 QS</h3>
+                                    <div class="product-price">6 100 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image1.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки New Balance ML574RP2</h3>
+                                    <div class="product-price">3 100 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image2.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки для бега Kalenji</h3>
+                                    <div class="product-price">4 000 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image3.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Mango</h3>
+                                    <div class="product-price">1 099 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image4.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Michael Kors Nick</h3>
+                                    <div class="product-price">4 900 грн.</div>
+                                </article>
+                            </li>
+                            <li class="catalog-item">
+                                <article class="product">
+                                    <div class="product-image">
+                                        <img src="./images/product-image5.jpg" alt="товар">
+                                        <div class="product-btns">
+                                            <button class="product-btn" aria-label="Показать информацию о товаре">
+                                                <img src="./images/product-btn-show.svg">
+                                            </button>
+                                            <button class="product-btn" aria-label="Добавить товар в корзину">
+                                                <img src="./images/product-btn-add.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title">Кроссовки Puma Electron E Pro</h3>
+                                    <div class="product-price">2 599 грн.</div>
+                                </article>
+                            </li>
+                        </ul>
+                        <div class="catalog-list-btn">
+                            <button class="btn btn-more">Показать еще</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about -->
+
+        <section class="about" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
+            <img class="about-figure" src="./images/about-figure.svg">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2 class="title about-title">Пара слов о нас</h2>
+                    <p class="about-desc">
+                        <q class="about-quote">Спорт держит нас в&nbsp;форме. Учит дисциплине. Объединяет нас. 
+                            Через спорт мы&nbsp;можем менять жизни. В&nbsp;том числе с&nbsp;помощью воодушевляющих историй спортсменов. 
+                            Чтобы помочь тебе подняться и&nbsp;двигаться вперед.</q>
+                    <site class="about-author">SneakMax</site>
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="./images/about-img.jpg" aria-hidden="true" alt="about-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- quiz -->
+
+        <section class="quiz" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+            <div class="container quiz-container">
+                <div class="quiz-inner">
+                    <h3 class="title quiz-title">Мы подберем идеальную пару для вас</h3>
+                    <p class="quiz-desc">Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+
+                    <form class="quiz-form" method="POST">
+                        <div class="quiz-questions">
+
+                        </div>
+                        <div class="last-question">
+                            <div class="last-question-form">
+                                <h3 class="last-question-title">Получить предложение</h3>
+                                <p class="last-question-desc">Получите подборку подходящих для вас моделей на почту</p>
+                                <input type="text" class="last-question-input" placeholder="Ваше имя">
+                                <input type="email" class="last-question-input" placeholder="E-mail">
+                                <button class="btn btn-last-question">Получить</button>
+                                <div class="last-question-decorate">
+                                  <img src="./images/iphone.png" alt="" aria-hidden="true">
+                                </div>
+                              </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- team -->
+
+        <section class="team" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+            <img class="team-figure" src="./images/team-bg-image.svg">
+            <div class="container">
+                <h2 class="title team-title">Наша команда</h2>
+                <ul class="team-list">
+                    <li class="team-item">
+                        <div class="team-image">
+                            <img src="./images/team1.jpg" alt="Фото">
+                            <div class="team-subtitle">Максим Золотарев</div>
+                            <div class="team-post">Администратор</div>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="team-image">
+                            <img src="./images/team2.jpg" alt="Фото">
+                            <div class="team-subtitle">Анна Сергеева</div>
+                            <div class="team-post">Менеджер</div>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="team-image">
+                            <img src="./images/team3.jpg" alt="Фото">
+                            <div class="team-subtitle">Анастасия Сташевская</div>
+                            <div class="team-post">SEO</div>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="team-image">
+                            <img src="./images/team4.jpg" alt="Фото">
+                            <div class="team-subtitle">Сергей Шевченко</div>
+                            <div class="team-post">Front-end developer</div>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="team-image">
+                            <img src="./images/team5.jpg" alt="Фото">
+                            <div class="team-subtitle">Владимир Бердник</div>
+                            <div class="team-post">Designer</div>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <div class="team-image">
+                            <img src="./images/team6.jpg" alt="Фото">
+                            <div class="team-subtitle">Светлана Ковалева</div>
+                            <div class="team-post">Креативный директор</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- faq -->
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="title">Часто задаваемые вопросы</h2>
+                <ul class="faq-list">
+                    <li class="faq-accordion">
+                      <button class="faq-accordion-control">
+                        <span class="faq-accordion-title">Оплата</span>
+                        <span class="faq-accordion-icon"><i class="fa-solid fa-plus"></i></span>
+                      </button>
+                      <div class="faq-accordion-content hidden">
+                        <p>Вы можете оплатить товар на нашем сайте с помощью банковских карт Visa и MasterCard 
+                           или наложенным платежом при получении</p>
+                      </div>
+                    </li>
+                    <li class="faq-accordion">
+                      <button class="faq-accordion-control">
+                        <span class="faq-accordion-title">Доставка</span>
+                        <span class="faq-accordion-icon"><i class="fa-solid fa-plus"></i></span>
+                      </button>
+                      <div class="faq-accordion-content hidden">
+                        <p>Товар отправляется через Новую Почту, Интайм, Деливери. Возможен самовывоз.<br>
+                            Доставка курьером:<br>
+                            - Выбранные товары должны быть в наличии в одном из магазинов.<br>
+                            - Звонок курьера осуществляется за час до доставки, в выбранный Вами день на момент оформления заказа на сайте.<br>
+                            - Заявки на курьерскую доставку принимаются до 18:00 с доставкой на текущий день.<br>
+                            - Возможность оформления доставки отображается при размещении заказа.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+            </div>
+        </section>
+
+        <!-- contacts -->
+
+        <section class="contacts">
+            <div class="container contacts-container">
+                <div class="contacts-text">
+                    <h2 class="title">Контакты</h2>
+                    <div class="contacts-item">
+                        <div class="contacts-subtitle">
+                            Главный офис
+                            <span class="tooltip">
+                                <button class="tooltip-btn" aria-describedby="office" aria-label="Описание">
+                                    <img src="./images/tooltip-icon.jpg">
+                                </button>
+                                <span class="tooltip-text" role="tooltip" id="office">
+                                  <span class="visually-hidden">Тултип:</span>
+                                  Адрес и&nbsp;телефон для корреспонденции, инвесторов. Вопросы о&nbsp;доставке, 
+                                  качестве обслуживания и&nbsp;товара просьба задавать в&nbsp;отдел продаж
+                                </span>
+                              </span>
+                        </div>
+                        <a class="contacts-phone" href="tel:78007898989">+7 800 789 89 89</a>
+                        <div class="contacts-address">г. Киев, Хрещатик, 31</div>
+                    </div>
+                    <div class="contacts-item">
+                        <div class="contacts-subtitle">Отдел продаж</div>
+                        <a class="contacts-phone" href="tel:78007898989">+7 800 789 89 89</a>
+                        <div class="contacts-address">г. Одесса, Комсомольская, 24</div>
+                    </div>
+                    <ul class="social">
+                        <li class="social-item">
+                            <a class="social-link" href="#" aria-label="Мы в Инстаграм">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a class="social-link" href="#" aria-label="Мы в Твиттер">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts-map">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325515.68167388736!2d30.252500069236618!3d50.402136747279684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2snl!4v1661118404102!5m2!1sru!2snl" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- insta -->
+
+        <section class="insta">
+            <div class="container insta-container">
+                <div class="insta-left" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500"> 
+                    <form class="form" action="#">
+                        <h3 class="title insta-title">Есть вопросы?</h3>
+                        <p class="insta-desc">Заполните форму и&nbsp;наш менеджер свяжется с&nbsp;вами</p>
+                        <input class="input-insta" type="text" placeholder="Ваше имя">
+                        <input class="input-insta" type="tel" placeholder="Номер телефона">
+                        <button class="btn btn-insta">Отправить</button>
+                    </form>
+                </div>
+                <div class="insta-right">
+                    <a class="insta-link" href="#">
+                        <img src="./images/Instagram-logo.png" alt="insta-logo">
+                    </a>
+                    <ul class="insta-content">
+                        <li class="insta-item">
+                            <a class="insta-link" href="#">
+                                <img src="./images/insta1.jpg" alt="intagram_photo">
+                            </a>
+                        </li>
+                        <li class="insta-item">
+                            <a class="insta-link" href="#">
+                                <img src="./images/insta2.jpg" alt="intagram_photo">
+                            </a>
+                        </li>
+                        <li class="insta-item">
+                            <a class="insta-link" href="#">
+                                <img src="./images/insta3.jpg" alt="intagram_photo">
+                            </a>
+                        </li>
+                        <li class="insta-item">
+                            <a class="insta-link" href="#">
+                                <img src="./images/insta4.jpg" alt="intagram_photo">
+                            </a>
+                        </li>
+                        <li class="insta-item">
+                            <a class="insta-link" href="#">
+                                <img src="./images/insta5.jpg" alt="intagram_photo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <a class="logo" href="#">SneakMax</a>
+            </div>
+                <nav class="nav">
+                    <ul class="nav-list-footer">
+                        <li class="nav-item-footer">
+                            <a class="nav-link" href="#">Каталог</a>
+                        </li>
+                        <li class="nav-item-footer">
+                            <a class="nav-link" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item-footer">
+                            <a class="nav-link" href="#">Подбор товара</a>
+                        </li>
+                        <li class="nav-item-footer">
+                            <a class="nav-link" href="#">Наша команда</a>
+                        </li>
+                        <li class="nav-item-footer">
+                            <a class="nav-link" href="#">Доставка и оплата</a>
+                        </li>
+                        <li class="nav-item-footer">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+    </footer>
+
+
+    <!-- noUiSlider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js" 
+    integrity="sha512-1mDhG//LAjM3pLXCJyaA+4c+h5qmMoTc7IuJyuNNPaakrWT9rVTxICK4tIizf7YwJsXgDC2JP74PGCc7qxLAHw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" 
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
